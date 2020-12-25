@@ -16,7 +16,9 @@ RUN apt-get update && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \
     wget https://download.documentfoundation.org/libreoffice/stable/7.0.4/deb/x86_64/LibreOffice_7.0.4_Linux_x86-64_deb.tar.gz && \
     tar -xf LibreOffice_7.0.4_Linux_x86-64_deb.tar.gz && \
-    cd LibreOffice_7.0.4.* && dpkg -i DEBS/* && cd /tmp && rm -rf /tmp/* && rm -rf /var/lib/apt/lists/*
+    cd LibreOffice_7.0.4.* && dpkg -i DEBS/* && \
+    ln -s /usr/local/bin/libreoffice7.0 /usr/local/bin/libreoffice && \
+    cd /tmp && rm -rf /tmp/* && rm -rf /var/lib/apt/lists/*
 
 
 # install php and its dependencies
