@@ -7,6 +7,8 @@ RUN apt-get update && \
     cabextract xfonts-utils libmspack0 libfontenc1 xfonts-encodings fontconfig \
     # php dependencies
     libzip-dev libsqlite3-dev libxml2-dev libfreetype6-dev libjpeg-dev libjpeg62-turbo-dev \
+    # fonts
+    fonts-arphic-ukai fonts-arphic-uming fonts-ipafont-mincho fonts-ipafont-gothic fonts-unfonts-core
     # other deps
     nano nginx supervisor procps htop && \
     cd /tmp && \
