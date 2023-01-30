@@ -10,15 +10,15 @@ RUN apt-get update && \
     # fonts
     fonts-arphic-ukai fonts-arphic-uming fonts-ipafont-mincho fonts-ipafont-gothic fonts-unfonts-core \
     # other deps
-    nano nginx supervisor procps htop && \
+    nano nginx supervisor procps htop ghostscript && \
     cd /tmp && \
     wget http://ftp.ru.debian.org/debian/pool/contrib/m/msttcorefonts/ttf-mscorefonts-installer_3.7_all.deb && \
     dpkg -i ttf-mscorefonts-installer_3.7_all.deb && \
     fc-cache -f  && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \
-    wget https://download.documentfoundation.org/libreoffice/stable/7.0.4/deb/x86_64/LibreOffice_7.0.4_Linux_x86-64_deb.tar.gz && \
-    tar -xf LibreOffice_7.0.4_Linux_x86-64_deb.tar.gz && \
-    cd LibreOffice_7.0.4.* && dpkg -i DEBS/* && \
+    wget https://tdf.bio.lmu.de/libreoffice/stable/7.4.5/deb/x86_64/LibreOffice_7.4.5_Linux_x86-64_deb.tar.gz && \
+    tar -xf LibreOffice_7.4.5_Linux_x86-64_deb.tar.gz && \
+    cd LibreOffice_7.4.5.* && dpkg -i DEBS/* && \
     ln -s /usr/local/bin/libreoffice7.0 /usr/local/bin/libreoffice && \
     cd /tmp && rm -rf /tmp/* && rm -rf /var/lib/apt/lists/*
 
